@@ -1,0 +1,57 @@
+[
+  {
+    "toolId": "masscan",
+    "displayName": "Masscan",
+    "binary": "masscan",
+    "resultFormat": "default",
+    "validScopeKinds": ["ip", "cidr"],
+    "validAssetTypes": ["ip"],
+    "maxTargets": null,
+    "targetEmission": "positional",
+    "outputArgs": ["-oJ", "{outPath}"],
+    "minVersion": null,
+    "requiresRoot": false,
+    "customBuilder": null,
+    "fields": [
+      {
+        "key": "ports",
+        "type": "string",
+        "flag": "-p",
+        "required": true,
+        "pattern": "^[A-Za-z0-9,\\-]{1,2048}$"
+      },
+      {
+        "key": "rate",
+        "type": "number",
+        "flag": "--rate",
+        "min": 1,
+        "max": 10000000
+      },
+      {
+        "key": "wait",
+        "type": "number",
+        "flag": "--wait",
+        "min": 0,
+        "max": 600
+      },
+      {
+        "key": "retries",
+        "type": "number",
+        "flag": "--retries",
+        "min": 0,
+        "max": 10
+      },
+      {
+        "key": "banners",
+        "type": "boolean_flag",
+        "flag": "--banners"
+      },
+      {
+        "key": "exclude",
+        "type": "string",
+        "flag": "--exclude",
+        "pattern": "^[0-9./, \\-]{1,2048}$"
+      }
+    ]
+  }
+]

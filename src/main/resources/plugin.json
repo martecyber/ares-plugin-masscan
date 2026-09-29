@@ -1,0 +1,10 @@
+{
+  "id": "masscan",
+  "version": "1.0.0-beta1",
+  "displayName": "Masscan",
+  "vendor": "Mart\u00edn Romera",
+  "license": "Proprietary",
+  "description": "Agent-executed high-speed port scanner: declares the agent-tool spec ares-agent uses to build the masscan command, plus the ImportParser for its JSON output.",
+  "sdkVersion": "1",
+  "icon": "/img/sources/masscan.svg"
+}
